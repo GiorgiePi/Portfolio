@@ -1164,7 +1164,7 @@ body.dark-mode .logo{
         height: 100px;
         /* Rimuoviamo il transform: translate qui per non rompere la rotazione. */
         /* Posizioniamo e centriamo staticamente: */
-        top: 36%; /* La posizione assoluta ora include lo spostamento desiderato */
+        top: 41%; /* La posizione assoluta ora include lo spostamento desiderato */
         left: 50%;
         margin-left: -50px; /* Metà della larghezza (100px / 2 = 50px) */
         /* Il transform (la rotazione) viene ereditato dalla regola globale @keyframes */
