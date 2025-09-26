@@ -1117,379 +1117,261 @@ body.dark-mode .logo{
 
 
 
-/*QUERY*/
 
 
 
 
-
-
-
-
-@media (max-width: 768px) {
-
-  /* =========================
-     NAVBAR
-  ========================= */
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 15px;
-  }
-
-  .logo {
-    font-size: 1.4rem;
-  }
-
-  .switch {
-    transform: scale(0.85);
-  }
-
-  /* =========================
-     HERO
-  ========================= */
- 
-  .hero {
-    padding: 50px 20px;
-    gap: 30px;
-    text-align: center;
-    align-items: center;
-    flex-direction: column; /* tutto in colonna */
-  }
-
-  .hero h1 {
-    font-size: 8rem; /* più piccolo per tablet */
-    margin-bottom: 30px; /* spazio tra h1 e il resto */
-  }
-
-  /* Contenitore bio sotto la stella */
-  .bio-preview {
-    flex-direction:row; /* stella sopra, foto sotto, testo sotto */
-    align-items: center;
-    gap: 15px; /* spazio tra stella, foto e testo */
-    transform: none; /* rimuove translate originale */
-  }
-
-  .star-hero {
-    position: relative;     
-    top: 0;
-    left: 30%;
-    
-    width: 180px;
-    height: 180px;
-    margin-top: 20px;
-    margin-bottom: 400px; /* spazio tra stella e bio */
-    animation: rotateStar 12s linear infinite!important;
-  }
-  
-
-  .bio-photo {
-    width: 150px;
-    height: 180px;
-    object-fit: cover;
-    transform: translateY(50px);
-    transform: translateX(-100px);
-    margin-top: 200px;
-  }
-
-  .bio-text {
-    max-width: 300px;
-    font-size: 0.9rem;
-    text-align: center;
-    
-    transform: translateY(50px);
-    transform: translateX(-100px);
-    margin-top: 200px;
-  }
-
-  /* Bottone e freccia scroll */
-  .hero-actions {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .scroll-down {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .scroll-down .arrow {
-    width: 10px;
-    height: 10px;
-    margin-left: 0;
-  }
-
-  /* Titoli secondari */
-  .titles {
-    transform: translate(0, 0);
-    justify-content: center;
-    gap: 15px;
-    font-size: 1rem;
-  }
-  /* =========================
-     ABOUT
-  ========================= */
-  #about {
-    padding: 50px 20px;
-  }
-
-  .about-container {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .about-text h2,
-  .about-skills h2 {
-    font-size: 2rem;
-  }
-
-  .skill-bar {
-    height: 10px;
-  }
-
-  /* =========================
-     CV
-  ========================= */
-  .cv-container {
-    margin: 20px;
-    max-width: 100%;
-  }
-
-  .cv-section {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .cv-entry-description {
-    width: 100%;
-  }
-
-  /* =========================
-     SERVICES
-  ========================= */
-  .services-section {
-    flex-direction: column;
-    margin-top: 0;
-    padding: 30px 15px;
-    gap: 30px;
-    align-items: center;
-  }
-
-  .services-container {
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
-  }
-
-  .services-left,
-  .services-right {
-    width: 100%;
-    transform: translateX(0);
-  }
-
-  .service-description {
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-
-  .services-photo {
-    max-width: 100%;
-    transform: translateY(0) !important;
-  }
-
-  .animated-title {
-    font-size: 4rem;
-    transform: translateY(-50px);
-  }
-  
-  #projects-section .projects-title {
-    font-size: 5rem;
-    width: 100%;
-    text-align: center;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  /* =========================
-     FOOTER
-  ========================= */
-  .footer-contact h2 {
-    font-size: 2rem;
-    width: 100%;
-    text-align: center;
-  }
-
-  .footer-links {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .footer-info {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .footer-copy {
-    font-size: 0.8rem;
-  }
-
-  /* =========================
-     BOTTONI
-  ========================= */
-  .btn {
-    width: 100%;
-    padding: 8px 15px;
-  }
-}
-
-
-
-
-
-
-@media (min-width: 360px) and (max-width: 480px) {
-  .hero {
-    padding: 40px 20px;
-    gap: 20px;
-    text-align: center;
-    align-items: center;
-  }
-
-  .hero h1 {
-    font-size: 5rem;
-  }
-
-  
-
-  .star-hero {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    left: 0!important;
-    animation: rotateStar 12s linear infinite;
-  }
-
-  /* Bio sotto la stella */
-  .bio-preview {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 15px;
-  }
-
-  .bio-photo {
-    width: 120px;
-    height: 150px;
-    object-fit: cover;
-    transform: translateY(-550px);
-    
-  }
-
-  .bio-text {
-    max-width: 280px!important;
-    font-size: 0.7rem!important;
-    text-align: center;
-    transform: translateY(-750px);
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    gap: 20px!important;
-  }
-
-  .scroll-down {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .scroll-down .arrow {
-    width: 10px;
-    height: 10px;
-    margin-left: 0;
-  }
-
-  .titles {
-    justify-content: center;
-    gap: 15px;
-    font-size: 0.9rem;
-    transform: translate(0,0);
-  }
-
-}
-  
-  
 /* =========================
-   Mobile (iPhone) fino a 480px
+   MEDIA QUERY: SMARTPHONE
+   max-width: 600px (o inferiore)
 ========================= */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
-  .hero {
-    padding: 30px 15px;
-    gap: 10px;
-  }
+    /* --- BODY BASE & UTILITY --- */
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .navbar {
+        padding: 10px 15px;
+    }
 
-  .hero h1 {
-    font-size: 4rem;
-  }
+    /* --- HERO SECTION --- */
+    .hero {
+        padding: 50px 15px;
+        text-align: center;
+    }
 
-  .bio-preview {
-    flex-direction: column; /* tutto in colonna: stella, foto, testo */
-    align-items: center;
-    gap: 10px;
-    margin-left: 0;
-    margin-top: 15px;
-  }
+    .hero h1 {
+        font-size: 4rem;
+        line-height: 1.1;
+        margin-top: 80px;
+    }
 
-  .star-hero {
-    width: 120px;
-    height: 120px;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+    .titles {
+        transform: none;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 11px;
+        gap: 15px;
+    }
 
-  .bio-preview .bio-container {
-    flex-direction: column; /* foto sopra, testo sotto */
-    gap: 8px;
-    align-items: center;
-  }
+    /* ********** CORREZIONE STELLA ********** */
+    .star-hero {
+        display: block;
+        width: 100px;
+        height: 100px;
+        /* Rimuoviamo il transform: translate qui per non rompere la rotazione. */
+        /* Posizioniamo e centriamo staticamente: */
+        top: 31%; /* La posizione assoluta ora include lo spostamento desiderato */
+        left: 50%;
+        margin-left: -50px; /* Metà della larghezza (100px / 2 = 50px) */
+        /* Il transform (la rotazione) viene ereditato dalla regola globale @keyframes */
+        z-index: 1; 
+        margin-top: 50px;
+        
+    }
+    
+    /* ************************************** */
 
-  .bio-photo {
-    width: 100px;
-    height: 120px;
-  }
+    .bio-preview {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 200px;
+    }
+    
+    .bio-photo, .bio-text {
+        transform: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .bio-text{
+      font-size:12px;
+    }
 
-  .bio-text {
-    max-width: 200px;
-    font-size: 0.85rem;
-    text-align: center;
-  }
+    .bio-photo {
+        
+        width: 150px; 
+        height: 150px;
+        object-fit: cover;
+    }
 
-  .hero-actions {
-    flex-direction: column;
-    gap: 8px;
-  }
+    .hero-actions {
+        justify-content: center;
+        margin-top: 30px;
+    }
 
-  .scroll-down {
-    flex-direction: column;
-    gap: 4px;
-  }
+    /* --- ABOUT SECTION --- */
+    #about {
+        padding: 60px 15px;
+    }
+    
+    .about-container {
+        flex-direction: column;
+        gap: 40px;
+    }
 
-  .scroll-down .arrow {
-    width: 8px;
-    height: 8px;
-  }
 
-  .titles {
-    font-size: 0.9rem;
-    gap: 8px;
-    justify-content: center;
-    transform: translate(0,0);
-  }
+    /* --- CV SECTION (Formazione/Esperienza) --- */
+    .cv-container {
+        margin: 20px 0;
+        padding: 0 15px;
+    }
+
+    .cv-section {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .cv-heading {
+        text-align: left; 
+        padding-left: 0;
+        font-size: 1.4rem;
+        width: 100%;
+    }
+
+    .cv-list {
+        align-items: flex-start;
+        padding-left: 0;
+    }
+    
+    .cv-entry {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .cv-entry-description {
+        width: auto;
+    }
+
+    .cv-entry-year {
+        margin-top: 5px;
+        align-self: flex-start;
+    }
+
+
+    /* --- PROJECTS SECTION --- */
+    #projects-section {
+        padding: 40px 15px;
+        min-height: 80vh; 
+    }
+.projects-title {
+    font-size: 2.5rem;             /* Dimensione adatta al mobile */
+    position: absolute;            /* Torna al posizionamento assoluto */
+    top: 50%;                      /* Sposta l'inizio al 50% verticale */
+    left: 50%;                     /* Sposta l'inizio al 50% orizzontale */
+    transform: translate(-50%, -50%); /* Centra il testo perfettamente */
+    width: 100%;                   /* Assicura che occupi tutta la larghezza */
+    z-index: 10;                   /* Mantiene il titolo sopra le card */
+    margin-bottom: 0;
 }
 
+    .projects-wrapper {
+        height: auto;
+        overflow: visible;
+    }
 
+    .projects-inner {
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        gap: 40px;
+    }
 
+    .project-card {
+        width: 90%; 
+        max-width: 400px;
+        align-self: flex-start !important; 
+    }
+    
+    .project-card:nth-child(2n) {
+        align-self: center !important; 
+    }
 
+    /* --- SERVICES SECTION --- */
+    #titleservices {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .animated-title {
+        font-size: 3rem;
+        transform: translateY(0);
+    }
+
+    .services-section {
+        margin-top: 0;
+        padding: 40px 15px;
+        justify-content: center;
+    }
+    
+    .services-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .services-left {
+        transform: none;
+    }
+
+    .service-description {
+        padding: 15px 0;
+    }
+  
+
+    .tool {
+    /* Mantiene la dimensione del font (1rem) per la leggibilità */
+    /* Aggiunge margine in basso per separare le righe */
+    margin-bottom: 20px; 
+    /* Aumenta il margine destro (lo spazio tra i tool sulla stessa riga) */
+    margin-right: 10px;
+    
+    /* Riduce leggermente il padding se vuoi renderli più compatti */
+    padding: 3px 7px;
+}
+
+.service-tools {
+    display: flex; /* Assicuriamo che sia un flex container */
+    flex-wrap: wrap; /* Permette l'andata a capo */
+    margin: 10px 0;
+}
+    /* --- FOOTER --- */
+    .centered-star{
+      width: 150px;
+      margin-bottom: 40px;
+    }
+    .site-footer {
+        padding: 40px 15px;
+    }
+
+    .footer-contact h2 {
+        font-size: 2rem;
+        width: auto;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        margin-top: 40px;
+        gap: 10px;
+        width: 100px;
+        margin: auto;
+        margin-top: 70px;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 20px;
+        transform: translateY(70px);
+    }
+
+    .footer-copy {
+        margin-top: 200px;
+        padding: 10px;
+        margin-bottom: 0;
+    }
+}
