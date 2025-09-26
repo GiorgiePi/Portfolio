@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Giorgia Pierotti</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <!-- Estrema sinistra -->
+    <div class="navbar-left">
+      <span class="logo">GP</span>
+    </div>
+  
+    <!-- Estrema destra -->
+    <div class="navbar-right">
+      <label class="switch">
+        <input type="checkbox" id="darkModeSwitch">
+        <span class="slider">
+          <!-- Sole -->
+          <svg class="icon sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+  
+          <!-- Luna -->
+          <svg class="icon moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </span>
+      </label>
+    </div>
+  </header>
+  
+  <script>
+    const switchBtn = document.getElementById('darkModeSwitch');
+    
+    // funzione che cambia tutte le immagini light/dark
+    function changeImages(mode) {
+  document.querySelectorAll('img').forEach(img => {
+    if (mode === 'dark' && img.src.includes('light_')) {
+      img.src = img.src.replace('light_', 'dark_');
+    } else if (mode === 'light' && img.src.includes('dark_')) {
+      img.src = img.src.replace('dark_', 'light_');
+    }
+  });
+}
+    // click sullo switch
+    switchBtn.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+      const mode = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', mode);
+      changeImages(mode);
+    });
+    
+    // caricamento iniziale
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') {
+        document.body.classList.add('dark-mode');
+        switchBtn.checked = true;
+        changeImages('dark');
+      } else {
+        changeImages('light');
+      }
+    });
+    </script>
+    
+  
+  
+ <!-- Hero -->
+ <section class="hero">
+  <h1>Giorgia Pierotti</h1>
+  <div class="titles">
+    <h2>Web Developer</h2>
+    <h2>Front-end Developer</h2>
+    <h2>UX Designer</h2>
+  </div>
+
+  <div class="bio-preview">
+    <img src="img/light_star.webp" alt="Stella" class="star-hero">
+    <img src="img/Photoroom_20250705_150109.JPG" alt="Foto Giorgia" class="bio-photo">
+    <div class="bio-text">
+      <p>
+        Ciao! Sono una front-end developer e appassionata di UI/UX design. Amo creare interfacce pulite, funzionali e intuitive. Ho una formazione completa in sviluppo web e una forte passione per la grafica e il design...
+      </p>
+      <div class="hero-actions">
+        <a href="#about" class="btn">Learn More</a>
+        <a href="#projects-section" class="scroll-down">
+        
+          <span class="scroll-text">I miei lavori</span> 
+           <span class="arrow"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+
+  
+
+  <!-- Bio (ancora) -->
+  <section id="about">
+    <div class="about-container">
+      
+      <!-- Colonna Sinistra -->
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          
+          Sono una Front-end Developer appassionata di web design e UX, sempre curiosa di sperimentare nuove idee. Amo progettare interfacce intuitive e curate, e con Figma mi diverto a realizzare layout e prototipi, migliorando l’esperienza degli utenti in modo creativo. <br><br>
+
+Nel mio lavoro unisco creatività e logica: dalla programmazione in HTML, CSS e JavaScript alla realizzazione di soluzioni visive responsive e piacevoli da usare. La mia formazione artistica, con indirizzo Architettura e Ambiente, mi ha insegnato a curare la composizione, lo spazio e i dettagli estetici. <br><br>
+Oltre al web development, nutro una grande passione per l’arte in tutte le sue forme, dalla grafica tradizionale all’illustrazione digitale, e adoro esplorare nuovi stili e tecniche. Amo anche viaggiare, scoprire nuove culture e trarre ispirazione dai luoghi e dalle persone che incontro. Nel tempo libero mi dedico alla lettura, al disegno,al canto,  alla progettazione grafica e alla sperimentazione di nuove idee creative.
+
+<br><br>
+Sono una persona curiosa, creativa e determinata, sempre alla ricerca di nuove sfide e opportunità per crescere professionalmente e personalmente.
+        </p>
+      </div>
+  
+      <!-- Colonna Destra -->
+      <div class="about-skills">
+        <h2>Competenze</h2>
+        <div class="skill">
+          <span>HTML</span>
+          <div class="skill-bar"><div class="skill-fill" style="--level: 95%"></div></div>
+        </div>
+        <div class="skill">
+          <span>CSS</span>
+          <div class="skill-bar"><div class="skill-fill" style="--level: 90%"></div></div>
+        </div>
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="skill-bar"><div class="skill-fill" style="--level: 75%"></div></div>
+        </div>
+        <div class="skill">
+          <span>PHP</span>
+          <div class="skill-bar"><div class="skill-fill" style="--level: 65%"></div></div>
+        </div>
+        <div class="skill">
+          <span>MySQL</span>
+          <div class="skill-bar"><div class="skill-fill" style="--level: 70%"></div></div>
+        </div>
+        <div class="skill">
+          <span>Figma</span>
+          <div class="skill-bar"><div class="skill-fill" style="--level: 85%"></div></div>
+        </div>
+        <div class="skill">
+          <span>WordPress</span>
+          <div class="skill-bar"><div class="skill-fill" style="--level: 30%"></div></div>
+        </div>
+        <div class="skill">
+          <span>Bootstrap</span>
+          <div class="skill-bar"><div class="skill-fill" style="--level: 75%"></div></div>
+        </div>
+        <div class="skill">
+            <span>Angular</span>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 60%"></div></div>
+          </div>
+      </div>
+  
+    </div>
+  </section>
+  <script>
+    const fills = document.querySelectorAll('.skill-fill');
+  
+    const Skillobserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const fill = entry.target;
+        const level = fill.style.getPropertyValue('--level');
+        if (entry.isIntersecting) {
+          fill.style.width = level; // anima
+        } else {
+          fill.style.width = '0';   // resetta quando esce
+        }
+      });
+    }, { threshold: 0.5 });
+  
+    fills.forEach(fill => Skillobserver.observe(fill));
+  </script>
+  
+
+
+  
+  <section class="cv-container">
+
+    <div class="cv-section">
+      <p class="cv-heading">Formazione</p>
+      <div class="cv-list">
+        <div class="cv-entry">
+          <div class="cv-entry-details">
+            <p class="cv-entry-name">Istituto CEFI, Roma</p>
+            <p class="cv-entry-description">Formazione completa in <strong>Web Development</strong>, con competenze sia in front-end (HTML, CSS, JavaScript, Angular) che in back-end (PHP, MySQL). <br> Il percorso ha fornito basi solide di programmazione, progettazione di interfacce e best practices nello sviluppo web moderno.</p>
+          </div>
+          <p class="cv-entry-year">2024-2025</p>
+        </div>
+  
+        <div class="cv-entry">
+          <div class="cv-entry-details">
+            <p class="cv-entry-name">Liceo Artistico e Linguistico Pablo Picasso, Pomezia</p>
+           
+            <p class="cv-entry-description">Percorso di studi ad indirizzo Architettura e Ambiente, con attenzione alla progettazione architettonica, alla composizione dello spazio e all’uso di strumenti tecnici come AutoCAD 2D e 3D.</p>
+          </div>
+          <p class="cv-entry-year">2012-2019</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="cv-section">
+      <p class="cv-heading">Esperienza Lavorativa</p>
+      <div class="cv-list">
+        <div class="cv-entry">
+          <div class="cv-entry-details">
+            <p class="cv-entry-name">Progetti Personali di Sviluppo Web</p>
+            <p class="cv-entry-description">Sviluppo autonomo di siti web e interfacce interattive, con attenzione alla UI/UX e alla responsività. Implementazione di HTML, CSS, JavaScript e MySQL, curando sia la parte visiva che la logica di programmazione.</p>
+          </div>
+          <p class="cv-entry-year">2024-in corso</p>
+        </div>
+  
+        <div class="cv-entry">
+          <div class="cv-entry-details">
+            <p class="cv-entry-name">biancocreativo®</p>
+            <p class="cv-entry-description">Tirocinio Front-End Developer</p>
+          </div>
+          <p class="cv-entry-year">2025</p>
+        </div>
+  
+       
+      </div>
+    </div>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const entries = document.querySelectorAll(".cv-entry");
+  
+      const observer = new IntersectionObserver((entriesList) => {
+        entriesList.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // animazione a cascata quando entra
+            document.querySelectorAll(".cv-entry").forEach((el, i) => {
+              setTimeout(() => {
+                el.classList.add("show");
+              }, i * 200);
+            });
+          } else {
+            // reset quando esce
+            document.querySelectorAll(".cv-entry").forEach((el) => {
+              el.classList.remove("show");
+            });
+          }
+        });
+      }, { threshold: 0.2 });
+  
+      const container = document.querySelector(".cv-container");
+      observer.observe(container);
+    });
+  </script>
+  
+
+  
+  <section id="projects-section">
+    <h1 class="projects-title">Progetti Selezionati</h1>
+    <div class="projects-wrapper">
+      <div class="projects-inner">
+        <a href="link-progetto1.html" class="project-card">
+          <img src="img/lavoro1.png" alt="Progetto 1">
+          <div class="project-info">
+            <div class="project-header">
+              <h3 class="project-title">Progetto 1</h3>
+              <span class="project-year">2023</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech">HTML</span>
+              <span class="tech">CSS</span>
+              <span class="tech">JavaScript</span>
+            </div>
+          </div>
+        </a>
+        <a href="link-progetto2.html" class="project-card">
+          <img src="img/Photoroom_20250705_150109.JPG" alt="Progetto 2">
+          <div class="project-info">
+            <div class="project-header">
+              <h3 class="project-title">Progetto 2</h3>
+              <span class="project-year">2024</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech">Figma</span>
+              <span class="tech">React</span>
+            </div>
+          </div>
+        </a>
+        <a href="link-progetto3.html" class="project-card">
+          <img src="img/Photoroom_20250705_150109.JPG" alt="Progetto 3">
+          <div class="project-info">
+            <div class="project-header">
+              <h3 class="project-title">Progetto 3</h3>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech">Angular</span>
+              <span class="tech">CSS</span>
+            </div>
+          </div>
+        </a>
+       
+         
+          </div>
+        </a>
+     
+   
+        <!-- aggiungi altre card qui -->
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <script>
+  gsap.registerPlugin(ScrollTrigger);
+  
+  const projectsInner = document.querySelector(".projects-inner");
+  const projectsWrapper = document.querySelector(".projects-wrapper");
+  
+  // calcola lo scroll necessario per tutti i progetti
+  const scrollDistance = projectsInner.scrollHeight - projectsWrapper.clientHeight;
+  
+  gsap.to(projectsInner, {
+    y: -scrollDistance,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#projects-section",
+      start: "top top",
+      end: () => `+=${scrollDistance}`,
+      pin: true,     // blocca la sezione
+      scrub: true    // sincronizza lo scroll
+    }
+  });
+  </script>
+  
+  
+  
+
+  
+
+
+
+
+ 
+  
+    
+
+  <section id="titleservices">
+    <h1 class="animated-title">I miei servizi</h1>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const section = document.getElementById("titleservices");
+      const title = section.querySelector(".animated-title");
+      const text = title.textContent;
+      
+      // split in span solo se non già fatto
+      if (!title.dataset.split) {
+        title.textContent = "";
+        for (const ch of text) {
+          const span = document.createElement("span");
+          span.textContent = ch === " " ? "\u00A0" : ch;
+          title.appendChild(span);
+        }
+        title.dataset.split = "true";
+      }
+    
+      const spans = title.querySelectorAll("span");
+    
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            spans.forEach((span, i) => {
+              span.style.animationDelay = `${i * 0.09}s`;
+              span.classList.add("animate");
+            });
+          } else {
+            spans.forEach(span => {
+              span.classList.remove("animate");
+              span.style.animationDelay = "";
+            });
+          }
+        });
+      }, { threshold: 0.1 });
+    
+      observer.observe(section);
+    });
+    </script>
+
+    
+
+
+
+  <section id="services" class="services-section">
+  
+    <div class="services-container">
+      
+  
+      <!-- Colonna sinistra -->
+      <div class="services-left">
+        <div class="service-item">
+          <div class="service-header">
+            <img src="img/light_star.webp" alt="Servizio 1" class="service-img">
+            <h3>Web Development</h3>
+          </div>
+          <p class="service-description">
+            Mi occupo dello sviluppo completo di siti web, seguendo tutto il ciclo di vita del progetto, dall’analisi delle esigenze alla realizzazione finale. Utilizzo tecnologie moderne come HTML, CSS, JavaScript e PHP, integrando database MySQL per creare soluzioni robuste e scalabili. Presto particolare attenzione alla qualità del codice, alla manutenzione futura e alla compatibilità cross-browser, assicurandomi che le interfacce siano responsive e funzionino perfettamente su qualsiasi dispositivo. La mia esperienza mi permette di collaborare efficacemente con designer e team di progetto, trasformando mockup e concept in siti web funzionali e performanti.
+          </p>
+          <div class="service-tools">
+            <span class="tool">HTML</span>
+            <span class="tool">CSS</span>
+            <span class="tool">Angular</span>
+            <span class="tool">Figma</span>
+            <span class="tool">Bootstrap</span>
+            <span class="tool">PHP</span>
+            <span class="tool">MAMP | phpMyAdmin</span>
+            <span class="tool">GitHub</span>
+          </div>
+         
+          <hr>
+        </div>
+  
+        <div class="service-item">
+          <div class="service-header">
+            <img src="img/light_star.webp" alt="Servizio 2" class="service-img">
+            <h3>Front-End Development</h3>
+          </div>
+          <p class="service-description">
+            Mi occupo della realizzazione delle interfacce web, trasformando design e concept in pagine funzionali, responsive e moderne. Utilizzo HTML, CSS e JavaScript per creare siti chiari e intuitivi, con attenzione all’usabilità e alla coerenza visiva. Ho esperienza anche con framework come Angular, che mi permette di strutturare meglio progetti più complessi. Mi assicuro che le pagine siano ottimizzate per dispositivi diversi e browser differenti, curando dettagli come layout, tipografia e interazioni di base. La mia esperienza nel front-end mi permette di collaborare efficacemente con designer e team di progetto, garantendo che ogni progetto sia non solo bello da vedere, ma anche semplice e piacevole da usare.
+          </p>
+          <div class="service-tools">
+            <span class="tool">HTML</span>
+            <span class="tool">CSS</span>
+            <span class="tool">Angular</span>
+            <span class="tool">Figma</span>
+            <span class="tool">Bootstrap</span>
+            <span class="tool">GitHub</span>
+            
+          </div>
+          
+          <hr>
+        </div>
+  
+        <div class="service-item">
+          <div class="service-header">
+            <img src="img/light_star.webp" alt="Servizio 3" class="service-img">
+            <h3>UX/UI Design</h3>
+          </div>
+          <p class="service-description">
+            Creo esperienze digitali centrate sull’utente, partendo dalla ricerca e dall’analisi dei bisogni reali per progettare interfacce chiare, intuitive e piacevoli. Realizzo wireframe, prototipi interattivi e mockup ad alta fedeltà, conducendo test di usabilità per raccogliere feedback concreti e migliorare continuamente il design. Mi occupo anche di definire flussi utente, mappe del percorso e micro-interazioni, combinando estetica e funzionalità per assicurare che ogni progetto non sia solo bello da vedere, ma anche semplice e coerente da usare. La mia esperienza nel front-end mi permette inoltre di tradurre facilmente i concept in interfacce implementabili.
+          </p>
+          <div class="service-tools">
+            <span class="tool">Figma</span>
+            <span class="tool">Canva</span>
+          </div>
+         
+          <hr>
+        </div>
+      </div>
+  
+      <!-- Colonna destra -->
+      <div class="services-right">
+        <img src="img/pexels-lada-rezantseva-106562584-9551663.jpg" alt="Foto Servizi" class="services-photo">
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    const section = document.querySelector(".services-section");
+    const img = document.querySelector(".services-photo");
+  
+    window.addEventListener("scroll", () => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        // aggiunge classe per animazione quando la sezione è visibile
+        section.classList.add("scrolling");
+      } else {
+        section.classList.remove("scrolling");
+      }
+    });
+  </script>
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  <div class="footer-container">
+  
+    <img src="img/light_star.webp" alt="stella" class="centered-star">
+  </div>
+  
+    
+      
+  
+  
+  
+  
+  <footer class="site-footer">
+    <!-- Sezione domande -->
+    <div class="footer-contact">
+
+      <h2>Sto cercando nuove opportunità lavorative <br>se vuoi, scrivimi!</h2>
+      <div class="footer-links">
+        <a href="mailto:Giorgia98.gp@gmail.com" target="_blank">Email</a>
+        
+        <a href="https://www.linkedin.com/in/giorgia-pierotti-470b11233/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/GiorgiePi" target="_blank">GitHub</a>
+      </div>
+    </div>
+  
+    <!-- Sezione info -->
+    <div class="footer-info">
+      <p>Design di: Giorgia Pierotti</p>
+      <p>Da: Italia</p>
+      <p><span class="online-dot"></span>Disponibile per lavoro: Full-time, Part-time </p>
+    </div>
+  
+    <!-- Copyright -->
+    <div class="footer-copy">
+      <p> Tutti i diritti riservati © 2025</p>
+    </div>
+  </footer>
+  
+  
+    
+  
+
+</body>
+
+</html>
+
+
