@@ -5,8 +5,8 @@
 
 @font-face {
     font-family: 'Gallient';
-    src: url('../fonts/Gallient-Regular.woff2') format('woff2'),
-         url('../fonts/Gallient-Regular.woff') format('woff');
+    src: url('/fonts/Gallient-Regular.woff2') format('woff2'),
+         url('/fonts/Gallient-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
@@ -14,8 +14,8 @@
 
 @font-face {
     font-family: 'Harmond';
-    src: url('../fonts/Harmond-ExtraBoldExpanded.woff2') format('woff2'),
-         url('../fonts/Harmond-ExtraBoldExpanded.woff') format('woff');
+    src: url('/fonts/Harmond-ExtraBoldExpanded.woff2') format('woff2'),
+         url('/fonts/Harmond-ExtraBoldExpanded.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
