@@ -232,7 +232,7 @@ margin-left: 17px;
     font-weight:900;       /* mette gli h2 in orizzontale */
     gap: 40px;                /* distanza tra i due h2 */
     flex-wrap: wrap;  
-    color: #a1410d90;
+    color: #a1410dcd;
     transform: translate(335px, -50px);
     margin-top: 20px;
     /* permette di andare a capo se lo schermo è stretto */
