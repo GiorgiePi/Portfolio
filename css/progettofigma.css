@@ -620,18 +620,28 @@ body.dark-mode .logo{
 
 
 
-.container {
-    gap: 20px;           /* meno spazio tra le immagini */
-    margin-top: 50px;    /* margini più piccoli */
-    margin-bottom: 50px;
-    flex-direction: column; /* le immagini vanno una sotto l’altra se serve */
-    align-items: center; /* centraggio verticale */
-  }
 
-  .container img {
-    width: 90%;           /* riduce le immagini per adattarsi allo schermo */
-    max-width: 300px;     /* larghezza massima */
-  }
+.container {
+  display: flex;               /* attiva Flexbox */
+  justify-content: center;     /* centra le immagini orizzontalmente */
+  gap: 20px;                   /* spazio tra le immagini */
+  flex-wrap: wrap;             /* vanno a capo su schermi piccoli */
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.image-below {
+  display: flex;               /* rende il div flex */
+  justify-content: center;     /* centra l'immagine dentro il div */
+}
+
+.image-below img {
+  width: 500px;                /* puoi regolare la grandezza */
+  max-width: 90%;              /* responsivo */
+  height: auto;
+}
+
+
 
 
 
