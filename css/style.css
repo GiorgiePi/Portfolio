@@ -1103,6 +1103,12 @@ body.dark-mode .slider .sun {
     border-top: 1px solid #F4E7D3;
   }
   
+  body.dark-mode .projects-title::after{
+    background:#F4E7D3;
+  }
+  body.dark-mode .projects-grid .project-card{
+    border: 1px solid #f4e7d356;
+  }
   /* Process section */
   body.dark-mode .rect {
     border: 1px solid #F4E7D3;
