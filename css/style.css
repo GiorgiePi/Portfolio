@@ -1668,48 +1668,42 @@ body.dark-mode .logo{
 
 
 .projects-title{
-  font-size: 7rem;
+  font-size: 6rem;
 }
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(500px, 1fr)); /* più larghe */
-    gap: 50px; /* più spazio tra le card */
-    justify-content: center; /* centra la griglia */
-    justify-items: center;   /* centra le card dentro le colonne */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* sempre 3 colonne */
+    gap: 48px;                                        /* gap controllato */
+    justify-content: center;
   }
 
   .project-card {
-    width: 100%;
-    max-width: 620px;  /* più ampia */
-    height: 400px;     /* più alta per mantenere proporzione */
-    border-radius: 24px;
-    padding: 16px;
-    transition: transform 0.3s ease;
+    width: 100%;     /* riempi la colonna */
+    max-width: none; /* niente limite che la “stringe” */
+    height: 370px;   /* più alta */
   }
 
   .project-card img {
-    height: 440px;     /* immagine più grande */
+    height: 400px;
     object-fit: cover;
-    border-radius: 20px;
   }
 
  .project-title {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
 
   .tech {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     padding: 5px 10px;
   }
 .project-year{
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 
 
 
     .animated-title{
-      font-size: 7rem;
+      font-size: 6rem;
       margin-top: 100px;
     }
    
