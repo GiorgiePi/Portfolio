@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Giorgia Pierotti</title>
+<link rel="stylesheet" href="css/projects.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+ <header class="navbar">
+  <div class="navbar-left">
+    <a href="index.html" class="logo">GP</a>
+  </div>
+
+
+  
+    <!-- Estrema destra -->
+    <div class="navbar-right">
+      <label class="switch">
+        <input type="checkbox" id="darkModeSwitch">
+        <span class="slider">
+          <!-- Sole -->
+          <svg class="icon sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+  
+          <!-- Luna -->
+          <svg class="icon moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </span>
+      </label>
+    </div>
+  </header>
+  
+  <script>
+    const switchBtn = document.getElementById('darkModeSwitch');
+    
+    // funzione che cambia tutte le immagini light/dark
+    function changeImages(mode) {
+  document.querySelectorAll('img').forEach(img => {
+    if (mode === 'dark' && img.src.includes('light_')) {
+      img.src = img.src.replace('light_', 'dark_');
+    } else if (mode === 'light' && img.src.includes('dark_')) {
+      img.src = img.src.replace('dark_', 'light_');
+    }
+  });
+}
+    // click sullo switch
+    switchBtn.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+      const mode = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', mode);
+      changeImages(mode);
+    });
+    
+    // caricamento iniziale
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') {
+        document.body.classList.add('dark-mode');
+        switchBtn.checked = true;
+        changeImages('dark');
+      } else {
+        changeImages('light');
+      }
+    });
+    </script>
+    
+ 
+
+    
+
+
+
+
+<section class="project-section">
+  <!-- Titolo che scorre -->
+  <div class="title-wrapper">
+    <div class="marquee">
+      <div class="marquee__inner">
+        <span class="item marquee__text">AES FORGE   AES FORGE    </span>
+        <span class="item marquee__text">AES FORGE   AES FORGE   </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Foto grande centrata -->
+  <div class="image-wrapper">
+    <img src="img/aET7skjhjJj.png"  />
+  </div>
+</section>
+</section>
+
+
+
+  <script>
+  // Duplichiamo automaticamente il contenuto per ottenere loop continuo
+  (function(){
+    const inner = document.getElementById('marqueeInner');
+    if (!inner) return;
+    // se contiene già più di una ripetizione, non duplicare ulteriormente
+    // (safe-guard se incolli più volte)
+    if (inner.dataset.duplicated === "true") return;
+    inner.innerHTML = inner.innerHTML + inner.innerHTML;
+    inner.dataset.duplicated = "true";
+
+    // Opzionale: regola la durata in base alla lunghezza del contenuto
+    // (commenta se vuoi durate fisse)
+    try {
+      const width = inner.getBoundingClientRect().width;
+      const speedBase = 0.02; // seconds per px, alza per rallentare
+      const computed = Math.max(8, Math.round(width * speedBase));
+      inner.style.animationDuration = computed + 's';
+    } catch(e){
+      // nothing
+    }
+  })();
+</script>
+
+
+
+
+  
+  
+
+
+
+
+<section class="project-detail">
+  <!-- Link + Tools a sinistra -->
+  <div class="project-left">
+    <div class="project-links">
+      <a href="https://giorgiepi.github.io/AesForge/index.html" target="_blank">
+        Sito <span class="arrow">↗</span>
+      </a>
+      <a href="https://github.com/GiorgiePi/AesForge" target="_blank">
+        GitHub <span class="arrow">↗</span>
+      </a>
+    </div>
+
+    <div class="project-tools">
+      <h4>TOOLS</h4>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+         <li>Figma</li>
+        <li>Canva</li>
+        <li>PHP</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Descrizione a destra -->
+  <div class="project-right">
+    <p>
+      AES Forge è il sito personale di Federico, un artigiano con una grande passione per il ferro e i metalli preziosi. La piattaforma funge da vetrina per i suoi lavori su misura, che spaziano dai coltelli da cucina e tattici a gioielli, spade decorative e altri oggetti in metallo realizzati artigianalmente. Ogni pezzo riflette la combinazione tra funzionalità, precisione tecnica e creatività artistica, mostrando l’abilità di Federico nel trasformare materiali grezzi in oggetti unici e curati nei dettagli.
+
+Durante lo sviluppo del sito, mi sono occupata della progettazione del logo, della UI design dell’intera piattaforma, della gestione del contatto con il cliente per definire esigenze e obiettivi, e della realizzazione tecnica con il codice, traducendo le idee e il design in un sito web interattivo e responsive. La piattaforma permette ai visitatori di esplorare la galleria dei lavori, mostrando la varietà dei progetti e l’attenzione ai dettagli, dai pezzi di collezione agli oggetti di uso quotidiano.
+    </p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    
+  <div class="footer-container">
+  
+    <img src="img/light_star.webp" alt="stella" class="centered-star">
+  </div>
+  
+    
+      
+  
+  
+  
+  
+  <footer class="site-footer">
+    <!-- Sezione domande -->
+    <div class="footer-contact">
+
+      <h2>Sto cercando nuove opportunità lavorative <br>se vuoi, scrivimi!</h2>
+      <div class="footer-links">
+        <a href="mailto:Giorgia98.gp@gmail.com" target="_blank">Email</a>
+        
+        <a href="https://www.linkedin.com/in/giorgia-pierotti-470b11233/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/GiorgiePi" target="_blank">GitHub</a>
+      </div>
+    </div>
+  
+    <!-- Sezione info -->
+    <div class="footer-info">
+      <p>Design di: Giorgia Pierotti</p>
+      <p>Da: Italia</p>
+      <p><span class="online-dot"></span>Disponibile per lavoro: Full-time, Part-time </p>
+    </div>
+  
+    <!-- Copyright -->
+    <div class="footer-copy">
+      <p> Tutti i diritti riservati © 2025</p>
+    </div>
+  </footer>
+  
+  
+    
+  
+
+</body>
+
+</html>
+
+
