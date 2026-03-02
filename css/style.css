@@ -37,9 +37,12 @@ body {
   h1,h2{
     font-family: 'Gallient';
   }
-  p,a{
+  p,a,h3{
     font-family: "Roboto", sans-serif;
     font-weight:200;
+  }
+  h3{
+    font-size: 26px;
   }
   /* =========================
      NAVBAR
@@ -51,6 +54,7 @@ body {
   justify-content: space-between;
   padding: 15px 25px;
   background: #f4e7d3; /* colore chiaro */
+  
 }
 
 /* Logo */
@@ -119,14 +123,12 @@ text-decoration: none;
 
 .slider .moon {
   color: #a1410d; /* colore marrone come il bordo */
-  stroke: #a1410d;
   fill:#a1410d;
   transform: translateX(4px); 
 }
 
 .slider .sun{
   color: #F4E7D3; /* colore marrone come il bordo */
-  stroke: #F4E7D3;
   fill:#F4E7D3;
 }
 
@@ -662,7 +664,7 @@ margin-left: 17px;
 
   
   position: relative;
-  font-family: 'Gallien';
+  font-family: 'Gallient';
   transform: translateY(-150px);
 }
 
@@ -1172,12 +1174,13 @@ body.dark-mode .logo{
     }
 
     .hero h1 {
-        font-size: 4rem;
+        font-size: 6rem;
         line-height: 1.1;
         margin-top: 80px;
     }
 
     .titles {
+      font-weight: bold;
         transform: none;
         justify-content: center;
         margin-top: 20px;
@@ -1185,17 +1188,19 @@ body.dark-mode .logo{
         font-size: 11px;
         gap: 15px;
     }
-
+.titles h3{
+  font-weight:300;
+}
     /* ********** CORREZIONE STELLA ********** */
     .star-hero {
         display: block;
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         /* Rimuoviamo il transform: translate qui per non rompere la rotazione. */
         /* Posizioniamo e centriamo staticamente: */
-        top: 36%; /* La posizione assoluta ora include lo spostamento desiderato */
+        top: 35%; /* La posizione assoluta ora include lo spostamento desiderato */
         left: 50%;
-        margin-left: -50px; /* Metà della larghezza (100px / 2 = 50px) */
+        margin-left: -80px; /* Metà della larghezza (100px / 2 = 50px) */
         /* Il transform (la rotazione) viene ereditato dalla regola globale @keyframes */
         z-index: 1; 
         margin-top: 75px;
@@ -1208,6 +1213,7 @@ body.dark-mode .logo{
         flex-direction: column;
         gap: 40px;
         margin-top: 130px;
+        font-weight:300;
     }
     
     .bio-photo, .bio-text {
@@ -1216,19 +1222,26 @@ body.dark-mode .logo{
         margin: 0 auto;
     }
     .bio-text{
-      font-size:12px;
+      font-size:18px;
+      font-weight:300;
     }
 
     .bio-photo {
         
-        width: 150px; 
-        height: 170px;
+        width: 250px; 
+        height: 300px;
         object-fit: cover;
     }
 
     .hero-actions {
         justify-content: center;
         margin-top: 30px;
+        font-size: 18px;
+        font-weight:300;
+    }
+    .scroll-text{
+              font-size: 18px!important;
+
     }
 
     /* --- ABOUT SECTION --- */
@@ -1241,6 +1254,12 @@ body.dark-mode .logo{
         gap: 40px;
     }
 
+.about-text p{
+  font-weight:300;
+}
+.about-text h2{
+  font-size: 40px;
+}
 
     /* --- CV SECTION (Formazione/Esperienza) --- */
     .cv-container {
@@ -1257,7 +1276,7 @@ body.dark-mode .logo{
     .cv-heading {
         text-align: left; 
         padding-left: 0;
-        font-size: 1.4rem;
+        font-size: 40px;
         width: 100%;
     }
 
@@ -1274,6 +1293,7 @@ body.dark-mode .logo{
 
     .cv-entry-description {
         width: auto;
+        font-weight: 300;
     }
 
     .cv-entry-year {
@@ -1293,9 +1313,18 @@ body.dark-mode .logo{
 
   /* opzionale ma utile: lasciare l’altezza libera su mobile */
   .project-card {
-    height: auto;
+    height: 310px;
   }
 
+.project-card img{
+  border-radius: 13px;
+}
+  .projects-title{
+     font-size: 60px;
+  }
+  .project-tech, .project-year{
+    font-weight: 300;
+  }
     /* --- SERVICES SECTION --- */
     #titleservices {
         margin-bottom: 50px;
@@ -1303,7 +1332,7 @@ body.dark-mode .logo{
     }
 
     .animated-title {
-        font-size: 3rem;
+        font-size: 60px;
         transform: translateY(0);
     }
 
@@ -1324,6 +1353,7 @@ body.dark-mode .logo{
 
     .service-description {
         padding: 15px 0;
+        font-weight: 300;
     }
   
 
@@ -1345,15 +1375,16 @@ body.dark-mode .logo{
 }
     /* --- FOOTER --- */
     .centered-star{
+      margin-top: -30px;
       width: 150px;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
     .site-footer {
         padding: 40px 15px;
     }
 
     .footer-contact h2 {
-        font-size: 2rem;
+        font-size: 50px;
         width: auto;
     }
 
@@ -1364,6 +1395,7 @@ body.dark-mode .logo{
         width: 100px;
         margin: auto;
         margin-top: 70px;
+        font-weight: 300;
     }
 
     .footer-info {
@@ -1375,9 +1407,9 @@ body.dark-mode .logo{
     }
 
     .footer-copy {
-        margin-top: 200px;
-        padding: 20px;
-        margin-bottom: 0;
+        margin-top: 180px;
+        padding: 10px;
+        margin-bottom: 0!important;
     }
 }
 
