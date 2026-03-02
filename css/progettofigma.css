@@ -646,12 +646,12 @@ body.dark-mode .carousel-button svg{
 
 .project-section {
     padding: 20px 10px;
+    margin-top: 20px;
   }
 
-  .marquee__text {
-    font-size: 60px; /* riduci il titolo per mobile */
+ .marquee__text {
+    font-size: 80px; /* riduci il titolo per mobile */
   }
-
   .image-wrapper img {
     max-width: 100%;
     height: auto;
@@ -665,7 +665,9 @@ body.dark-mode .carousel-button svg{
     padding: 2rem 1rem;
     gap: 20px; /* spazio tra left e right */
   }
-
+ .project-tools{
+    font-size: 25px;
+  }
   .project-left, .project-right {
     width: 100%;
     min-width: unset;
@@ -673,7 +675,8 @@ body.dark-mode .carousel-button svg{
 
   .project-right p {
     width: 100%;
-    font-size: 0.9rem;
+     font-size: 20px;  
+     font-weight: 300;
     line-height: 1.4;
     margin-top: -40px;
   }
@@ -696,7 +699,7 @@ body.dark-mode .carousel-button svg{
   .project-tools ul li {
     width: auto;           /* larghezza automatica */
     padding: 4px 8px;      /* padding ridotto per mobile */
-    font-size: 0.8rem;     /* testo leggermente più piccolo */
+     font-size: 18px;       /* testo leggermente più piccolo */
   }
 
  
@@ -785,15 +788,16 @@ body.dark-mode .carousel-button svg{
  
     /* --- FOOTER --- */
     .centered-star{
+      margin-top: -30px;
       width: 150px;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
     .site-footer {
         padding: 40px 15px;
     }
 
     .footer-contact h2 {
-        font-size: 2rem;
+        font-size: 50px;
         width: auto;
     }
 
@@ -804,6 +808,7 @@ body.dark-mode .carousel-button svg{
         width: 100px;
         margin: auto;
         margin-top: 70px;
+        font-weight: 300;
     }
 
     .footer-info {
@@ -815,9 +820,9 @@ body.dark-mode .carousel-button svg{
     }
 
     .footer-copy {
-        margin-top: 200px;
-        padding: 20px;
-        margin-bottom: 0;
+        margin-top: 180px;
+        padding: 10px;
+        margin-bottom: 0!important;
     }
 }
 
