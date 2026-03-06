@@ -857,6 +857,10 @@ body.dark-mode .carousel-button svg{
   font-size: 150px;
   
 }
+ .project-tools{
+    font-size: 20px;
+    margin-top: 100px;
+  }
 .project-right p {
   width: 600px;
  transform: translateX(-100px);
