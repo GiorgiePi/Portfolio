@@ -983,6 +983,9 @@ body.dark-mode .slider .moon {
   transform: translateX(4px); 
 }
 
+body.dark-mode .cv-entry a{
+  color: #F4E7D3;
+}
 body.dark-mode .slider .sun {
   color: #F4E7D3;  /* sole */
   stroke: #F4E7D3;
