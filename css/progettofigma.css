@@ -728,7 +728,10 @@ body.dark-mode .carousel-button svg{
     line-height: 1.4;
     margin-top: -40px;
   }
-
+.project-tools{
+    font-size: 20px;
+    margin-top: 150px;
+  }
   .project-tools h4 {
     margin-top: 80px;
   }
@@ -859,7 +862,7 @@ body.dark-mode .carousel-button svg{
 }
  .project-tools{
     font-size: 20px;
-    margin-top: 100px;
+    margin-top: 150px;
   }
 .project-right p {
   width: 600px;
