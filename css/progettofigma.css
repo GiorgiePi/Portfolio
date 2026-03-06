@@ -206,6 +206,37 @@ body {
 
 
 
+
+
+.project-links a {
+  text-decoration: none;
+  color: #ad4802;           /* colore arancione */
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s;
+  
+  
+}
+
+.project-links a:hover {
+  color: #7c320a;
+}
+
+/* FRECCIA DIAGONALE */
+.project-links a .arrow {
+  margin-left: 0.3rem;
+  display: inline-block;
+  
+  transition: transform 0.3s;
+}
+
+.project-links a:hover .arrow {
+  transform: translate(2px, -2px);
+}
+
+
+
 /* Contenitore generale */
 .carousel-wrapper {
   display: flex;
