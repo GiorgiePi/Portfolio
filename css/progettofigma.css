@@ -643,7 +643,10 @@ body.dark-mode .carousel-button svg{
     }
 
  
-
+.image-below video {
+  width: 370px;
+  height: auto;
+}
   .carousel-wrapper {
     width: 90%;
   }
