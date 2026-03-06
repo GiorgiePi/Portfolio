@@ -552,7 +552,7 @@ body.dark-mode .logo{
     font-size: 80px; /* riduci il titolo per mobile */
   }
 
-  .image-wrapper img {
+ .image-wrapper img,  .image-wrapper video {
     max-width: 100%;
     height: auto;
   }
