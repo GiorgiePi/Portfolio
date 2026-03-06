@@ -713,7 +713,8 @@ body.dark-mode .carousel-button svg{
     gap: 20px; /* spazio tra left e right */
   }
  .project-tools{
-    font-size: 25px;
+    font-size: 20px;
+    margin-top: 100px;
   }
   .project-left, .project-right {
     width: 100%;
