@@ -193,7 +193,7 @@ body {
   text-align: center;
   margin-top: 8px;
 }
-.image-wrapper img {
+.image-wrapper video,.image-wrapper img {
   display: block;
   margin: 0 auto;
   width: 100%;
@@ -205,34 +205,8 @@ body {
 }
 
 
-/*container foto*/
-.container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
 
-.image-below img,
-.image-below video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.image-below {
-  aspect-ratio: 1 / 1; 
-  overflow: hidden;
-}
 
-.image-below img,
-.image-below video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.image-below video {
-  width: 500px;
-  height: 600px;
-}
 /* Contenitore generale */
 .carousel-wrapper {
   display: flex;
@@ -642,7 +616,11 @@ body.dark-mode .carousel-button svg{
         padding: 10px 15px;
     }
 
-
+ 
+.image-below video {
+  width: 30px;
+  height: auto;
+}
   .carousel-wrapper {
     width: 90%;
   }
@@ -720,29 +698,6 @@ body.dark-mode .carousel-button svg{
   }
 
  
-
-
-
-
-.container {
-  display: flex;               /* attiva Flexbox */
-  justify-content: center;     /* centra le immagini orizzontalmente */
-  gap: 20px;                   /* spazio tra le immagini */
-  flex-wrap: wrap;             /* vanno a capo su schermi piccoli */
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.image-below {
-  display: flex;               /* rende il div flex */
-  justify-content: center;     /* centra l'immagine dentro il div */
-}
-
-.image-below img {
-  width: 500px;                /* puoi regolare la grandezza */
-  max-width: 90%;              /* responsivo */
-  height: auto;
-}
 
 
 
