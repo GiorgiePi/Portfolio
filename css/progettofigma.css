@@ -205,17 +205,34 @@ body {
 }
 
 
+/*container foto*/
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
 
+.image-below img,
+.image-below video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.image-below {
+  aspect-ratio: 1 / 1; 
+  overflow: hidden;
+}
 
-
-
-
-
-
-
-
-
-
+.image-below img,
+.image-below video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-below video {
+  width: 500px;
+  height: 600px;
+}
 /* Contenitore generale */
 .carousel-wrapper {
   display: flex;
@@ -226,6 +243,7 @@ body {
   gap: 10px;
   margin: 0 auto;
 }
+
 
 /* Barra superiore con le frecce */
 .carousel-controls {
