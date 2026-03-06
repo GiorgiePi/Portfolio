@@ -829,9 +829,7 @@ body.dark-mode .carousel-button svg{
   width: 160px;
   height: 160px;
 }
-
-    
-  .container {
+.container {
     grid-template-columns: 1fr;
     height: auto;
     padding: 20px;
@@ -853,6 +851,8 @@ body.dark-mode .carousel-button svg{
     object-fit: cover;
   }
 }
+ 
+  
 @media screen and (min-width: 1300px) and (max-width: 1439px){
     
 
